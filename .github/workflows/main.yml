@@ -1,3 +1,4 @@
+
 name: CI/CD Test
 
 on:
@@ -19,7 +20,10 @@ jobs:
         run: grep -i "challenge" README.md
 
       - name: Lint check
-        run: echo "Lint passed"
+        run: |
+          npx --yes markdownlint-cli2 README.md
 
       - name: Build project
-        run: echo "Build complete"
+        run: |
+          npx --yes marked README.md -o README.html
+          test -s README.html
