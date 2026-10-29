@@ -2,16 +2,16 @@ name: CI
 
 on:
  push:
- branches: [main]
+   branches: [main]
 
 jobs:
  build:
  runs-on: ubuntu-latest
  steps:
  - uses: actions/checkout@v4
- - name: Run test
- run: echo Test passed
+  - name: Run test
+    run: echo Test passed
  - name: Lint check
- run: echo Lint passed
+  run: echo Lint passed
  - name: Build project
  run: echo Build complete
