@@ -1,4 +1,3 @@
-```yaml
 name: CI/CD Test
 
 on:
@@ -24,4 +23,3 @@ jobs:
 
       - name: Build project
         run: echo "Build complete"
-```
